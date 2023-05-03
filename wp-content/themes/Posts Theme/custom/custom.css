@@ -1,0 +1,7 @@
+a, h1, h2, h3, h4{
+    text-decoration: none;
+    color: black;
+}
+a:-webkit-any-link {
+    text-decoration: none;
+}
