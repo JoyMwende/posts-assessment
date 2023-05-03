@@ -1,18 +1,22 @@
 <?php get_header(); ?>
+<h2>Index page</h2>
 
 <?php
     if (have_posts()):
         while (have_posts()): the_post() ;?>
 
-        <?php // require 'content.php' ?>
+       <!-- Post content -->
         <?php get_template_part('content', get_post_format()) ?>
+      
         
     <?php endwhile; ?>
 
     <!-- pagination -->
-    <?php next_posts_link('<< Older posts')?>
-    <?php previous_posts_link('Newer posts >>')?>
-<?php endif; ?>
+   <div class="pagination">
+        <div class="prev-link"><?php previous_posts_link('<< Previous Page'); ?></div>
+        <div class="next-link"><?php next_posts_link('Next Page >>'); ?></div>
+    </div>
+    <?php endif; ?>
 
 
 <?php get_footer(); ?>
